@@ -7,6 +7,7 @@
   flex-direction: column
   justify-content: space-around
   margin: 0
+  margin-left: 10px
   padding: 0
   list-style-position: inside
   z-index: 10
@@ -14,16 +15,17 @@
   & > li
     position: relative
     top: -5px
-    color: $white
-    font-size: 6px
+    color: $navyBlue
+    font-size: 20px
     cursor: pointer
+    width: 150px
 
     span
       position: relative
       top: 3px
       left: 10px
-      color: $white
-      font-size: 14px
+      color: $navyBlue
+      font-size: 20px
       font-weight: 300
       opacity: 0
       visibility: hidden
@@ -36,23 +38,8 @@
       font-size: 14px
       font-weight: 300
 
-  li:nth-child(1)::before
-    content: "01"
-
-  li:nth-child(2)::before
-    content: "02"
-
-  li:nth-child(3)::before
-    content: "03"
-
-  li:nth-child(4)::before
-    content: "04"
-
-  li:nth-child(5)::before
-    content: "05"
-
   li.is-active
-    color: $highlight
+    color: $navyBlue
     transition: color .4s ease-in-out
 
     span
@@ -62,4 +49,4 @@
 
     &::before
       left: -33px
-      color: $white
+      color: $navyBlue

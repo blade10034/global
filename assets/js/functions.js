@@ -180,17 +180,18 @@ $( document ).ready(function() {
     $('.slider--prev, .slider--next').click(function() {
 
       var $this = $(this),
-          curLeft = $('.slider').find('.slider--item-left'),
-          curLeftPos = $('.slider').children().index(curLeft),
-          curCenter = $('.slider').find('.slider--item-center'),
-          curCenterPos = $('.slider').children().index(curCenter),
-          curRight = $('.slider').find('.slider--item-right'),
-          curRightPos = $('.slider').children().index(curRight),
-          totalWorks = $('.slider').children().length,
-          $left = $('.slider--item-left'),
-          $center = $('.slider--item-center'),
-          $right = $('.slider--item-right'),
-          $item = $('.slider--item');
+          sliderContainer = $this.parent().find('.slider');
+          curLeft = $(sliderContainer).find('.slider--item-left'),
+          curLeftPos = $(sliderContainer).children().index(curLeft),
+          curCenter = $(sliderContainer).find('.slider--item-center'),
+          curCenterPos = $(sliderContainer).children().index(curCenter),
+          curRight = $(sliderContainer).find('.slider--item-right'),
+          curRightPos = $(sliderContainer).children().index(curRight),
+          totalWorks = $(sliderContainer).children().length,
+          $left = $($(sliderContainer).find('.slider--item-left')),
+          $center = $($(sliderContainer).find('.slider--item-center')),
+          $right = $($(sliderContainer).find('.slider--item-right')),
+          $item = $($(sliderContainer).find('.slider--item'));
 
       $('.slider').animate({ opacity : 0 }, 400);
 
